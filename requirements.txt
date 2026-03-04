@@ -1,0 +1,47 @@
+# ================================================================
+#  Paracetamol Document QA System — Requirements
+#  RAG Pipeline: LangChain + Streamlit + Ollama (100% Local)
+# ================================================================
+
+# ── Web UI ───────────────────────────────────────────────────────
+streamlit>=1.32.0
+
+# ── LangChain (core + community loaders/vectorstores) ────────────
+langchain>=0.2.0
+langchain-core>=0.2.0
+langchain-community>=0.2.0
+
+# ── Document Loading ─────────────────────────────────────────────
+pypdf>=4.0.0
+
+# ── Vector Store ─────────────────────────────────────────────────
+faiss-cpu>=1.7.4
+
+# ── Embeddings — HuggingFace fallback (no Ollama pull needed) ────
+sentence-transformers>=2.7.0
+torch>=2.0.0               # required by sentence-transformers
+transformers>=4.38.0       # required by sentence-transformers
+
+# ── HTTP — Ollama API calls ───────────────────────────────────────
+requests>=2.31.0
+
+# ── Environment Variables ─────────────────────────────────────────
+python-dotenv>=1.0.0
+
+# ── PDF Report Generation ─────────────────────────────────────────
+reportlab>=4.0.0
+
+# ================================================================
+#  INSTALL ALL:
+#      pip install -r requirements.txt
+#
+#  GPU embeddings (optional, faster inference):
+#      pip install torch --index-url https://download.pytorch.org/whl/cu118
+#
+#  Ollama setup (run ONCE after: ollama serve):
+#      ollama pull llama3               # recommended chat model
+#      ollama pull nomic-embed-text     # recommended embed model (optional)
+#
+#  Run the app:
+#      streamlit run paracetamol_ollama_rag.py
+# ================================================================
