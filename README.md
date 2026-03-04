@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 💊 Paracetamol Document QA System
 ### Retrieval-Augmented Generation (RAG) · LangChain · Streamlit · Ollama / Groq
 
